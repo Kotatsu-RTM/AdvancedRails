@@ -5,8 +5,6 @@ importPackage(Packages.jp.ngt.rtm.rail.util);
 importPackage(Packages.jp.ngt.ngtlib.renderer);
 
 function init(par1, par2) {
-  allParts = renderer.registerParts(new Parts("Pillar", "obj1"));
-  Light = renderer.registerParts(new Parts("Lights"));
 }
 
 function renderRailStatic(tileEntity, posX, posY, posZ, par8, pass) {
