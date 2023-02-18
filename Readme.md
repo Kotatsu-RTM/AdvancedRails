@@ -1,3 +1,10 @@
+> **Note**
+> 本リポジトリはAdvancedRailsのForkであり、描画スクリプトをJVM言語へと書き換える  
+> プロジェクトの一環として開発されています。  
+> 上流のプロジェクトとの同期が考慮されていないため、問題が発生する場合があります。
+
+---
+
 # Advanced Rails
 [![MCVer](https://img.shields.io/badge/Minecraft-1.7.10-brightgreen)](https://www.minecraft.net/)
 [![ForgeVer](https://img.shields.io/badge/Forge-10.13.4.1614-important)](https://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.7.10.html)
