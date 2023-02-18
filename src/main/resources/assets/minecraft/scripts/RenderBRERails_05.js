@@ -10,19 +10,6 @@ HALF_GAUGE = 0.5647;
 YAW_RATE = 450.0;
 
 function init(par1, par2) {
-  Pcs = renderer.registerParts(new Parts("Pcs"));
-  fixtureL = renderer.registerParts(new Parts("FiL"));
-  fixtureR = renderer.registerParts(new Parts("FiR"));
-  leftParts = renderer.registerParts(new Parts("RaL", "sideL"));
-  rightParts = renderer.registerParts(new Parts("RaR", "sideR"));
-  start = renderer.registerParts(new Parts("start"));
-  end = renderer.registerParts(new Parts("end"));
-  tongFL = renderer.registerParts(new Parts("TLF"));
-  tongBL = renderer.registerParts(new Parts("TLB"));
-  tongFR = renderer.registerParts(new Parts("TRF"));
-  tongBR = renderer.registerParts(new Parts("TRB"));
-  anchorL = renderer.registerParts(new Parts("anchorL"));
-  anchorR = renderer.registerParts(new Parts("anchorR"));
 }
 
 function renderRailStatic(tileEntity, posX, posY, posZ, par8, pass) {
