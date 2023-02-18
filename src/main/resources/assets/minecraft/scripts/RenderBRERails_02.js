@@ -11,45 +11,6 @@ HALF_GAUGE = 0.5647;
 YAW_RATE = 450.0;
 
 function init(par1, par2) {
-  Pcs = renderer.registerParts(new Parts("Pcs"));
-  Ballasts = renderer.registerParts(
-    new Parts(
-      "Ba1",
-      "Ba2",
-      "Ba13",
-      "Ba4",
-      "Ba5",
-      "Ba6",
-      "Ba7",
-      "Ba8",
-      "Ba9",
-      "Ba10",
-      "Ba11",
-      "Ba12",
-      "Ba13",
-      "Ba14"
-    )
-  );
-  fixtureL = renderer.registerParts(new Parts("FiL"));
-  fixtureR = renderer.registerParts(new Parts("FiR"));
-  leftParts = renderer.registerParts(new Parts("RaL", "sideL"));
-  rightParts = renderer.registerParts(new Parts("RaR", "sideR"));
-  tongFL = renderer.registerParts(new Parts("TLF"));
-  tongBL = renderer.registerParts(new Parts("TLB"));
-  tongFR = renderer.registerParts(new Parts("TRF"));
-  tongBR = renderer.registerParts(new Parts("TRB"));
-  grooveR = renderer.registerParts(new Parts("grooveR"));
-  grooveL = renderer.registerParts(new Parts("grooveL"));
-  joint = renderer.registerParts(new Parts("joint"));
-  anchorR = renderer.registerParts(new Parts("anchorR"));
-  anchorL = renderer.registerParts(new Parts("anchorL"));
-  wallE = renderer.registerParts(new Parts("wallE"));
-  wallR = [];
-  wallL = [];
-  for (var j = 1; j <= 13; j++) {
-    wallR.push(renderer.registerParts(new Parts("wallR_" + j.toString())));
-    wallL.push(renderer.registerParts(new Parts("wallL_" + j.toString())));
-  }
 }
 
 function renderRailStatic(tileEntity, posX, posY, posZ, par8, pass) {
