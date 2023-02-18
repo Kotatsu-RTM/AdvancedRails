@@ -3,7 +3,6 @@ importPackage(Packages.org.lwjgl.opengl);
 importPackage(Packages.jp.ngt.rtm.render);
 
 function init(par1, par2) {
-  allParts = renderer.registerParts(new Parts("obj1", "obj2"));
 }
 
 function renderRailStatic(tileEntity, posX, posY, posZ, par8, pass) {
