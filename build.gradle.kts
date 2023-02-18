@@ -31,12 +31,12 @@ repositories {
 dependencies {
     val fgDepManager = project.extensions[DependencyManagementExtension.EXTENSION_NAME] as DependencyManagementExtension
 
-    implementation(kotlin("stdlib"))
+    api(kotlin("stdlib"))
 
     add("minecraft", "net.minecraftforge:forge:1.12.2-14.23.5.2860")
 
-    compileOnly(fgDepManager.deobf("curse.maven:ngtlib-288989:3873392"))
-    compileOnly(fgDepManager.deobf("curse.maven:realtrainmod-288988:3873403"))
+    implementation(fgDepManager.deobf("curse.maven:ngtlib-288989:3873392"))
+    implementation(fgDepManager.deobf("curse.maven:realtrainmod-288988:3873403"))
 }
 
 configurations.all {
@@ -58,10 +58,7 @@ tasks {
     withType<Jar> {
         duplicatesStrategy = DuplicatesStrategy.EXCLUDE
         from(
-            configurations
-                .implementation
-                .get()
-                .copy()
+            configurations.api.get().copy()
                 .apply { isCanBeResolved = true }
                 .map { if (it.isDirectory) it else zipTree(it) }
         )
