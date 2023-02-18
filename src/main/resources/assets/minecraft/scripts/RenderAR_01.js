@@ -7,7 +7,6 @@ importPackage(Packages.jp.ngt.rtm);
 var currentRailIndexField;
 
 function init(par1, par2) {
-  pf_01 = renderer.registerParts(new Parts("PF_01")); //直接置く用
 }
 
 function renderRailStatic(tileEntity, posX, posY, posZ, par8, pass) {
