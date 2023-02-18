@@ -1,24 +1,69 @@
+import net.minecraftforge.gradle.userdev.UserDevExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import net.minecraftforge.gradle.userdev.DependencyManagementExtension
 
 plugins {
-    kotlin("jvm") version "1.7.21"
+    kotlin("jvm") version "1.8.10"
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
+buildscript {
+    repositories {
+        maven { url = uri("https://repo.siro256.dev/repository/maven-public/") }
+    }
+
+    dependencies {
+        classpath("net.minecraftforge.gradle:ForgeGradle:5.1.+") {
+            isChanging = true
+        }
+    }
+}
+
+apply(plugin = "net.minecraftforge.gradle")
+
+group = "com.github.kotatsu-rtm.advancedrails"
+version = "1.5"
 
 repositories {
-    mavenCentral()
+    maven { url = uri("https://repo.siro256.dev/repository/maven-public/") }
+    maven { url = uri("https://cursemaven.com") }
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
+    val fgDepManager = project.extensions[DependencyManagementExtension.EXTENSION_NAME] as DependencyManagementExtension
+
+    implementation(kotlin("stdlib"))
+
+    add("minecraft", "net.minecraftforge:forge:1.12.2-14.23.5.2860")
+
+    compileOnly(fgDepManager.deobf("curse.maven:ngtlib-288989:3873392"))
+    compileOnly(fgDepManager.deobf("curse.maven:realtrainmod-288988:3873403"))
 }
 
-tasks.test {
-    useJUnitPlatform()
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor(0, TimeUnit.SECONDS)
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
+configure<UserDevExtension> {
+    mappings("snapshot", "20171003-1.12")
+}
+
+tasks {
+    withType<KotlinCompile> {
+        kotlinOptions {
+            jvmTarget = "1.8"
+            allWarningsAsErrors = true
+        }
+    }
+
+    withType<Jar> {
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+        from(
+            configurations
+                .implementation
+                .get()
+                .copy()
+                .apply { isCanBeResolved = true }
+                .map { if (it.isDirectory) it else zipTree(it) }
+        )
+    }
 }
