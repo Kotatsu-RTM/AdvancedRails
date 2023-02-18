@@ -7,12 +7,6 @@ importPackage(Packages.jp.ngt.rtm);
 var currentRailIndexField;
 
 function init(par1, par2) {
-  Base = renderer.registerParts(new Parts("Base"));
-  End = renderer.registerParts(new Parts("End"));
-  wall = [];
-  for (var j = 1; j <= 8; j++) {
-    wall.push(renderer.registerParts(new Parts("Ba" + j.toString())));
-  }
 }
 
 function renderRailStatic(tileEntity, posX, posY, posZ, par8, pass) {
