@@ -1,0 +1,12 @@
+[
+  {
+    "modid": "advancedrails",
+    "name": "AdvancedRails",
+    "version": "1.5",
+    "url": "https://github.com/Kotatsu-RTM/AdvancedRails",
+    "requiredMods": [
+      "ngtlib",
+      "rtm"
+    ]
+  }
+]
