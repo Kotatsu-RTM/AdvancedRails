@@ -10,8 +10,6 @@ HALF_GAUGE = 0.5647;
 YAW_RATE = 450.0;
 
 function init(par1, par2) {
-  anchorL = renderer.registerParts(new Parts("anchorL"));
-  anchorR = renderer.registerParts(new Parts("anchorR"));
 }
 
 function renderRailStatic(tileEntity, posX, posY, posZ, par8, pass) {
