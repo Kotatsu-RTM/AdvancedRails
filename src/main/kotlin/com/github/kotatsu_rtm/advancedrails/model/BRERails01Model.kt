@@ -2,17 +2,19 @@ package com.github.kotatsu_rtm.advancedrails.model
 
 import jp.ngt.rtm.render.PartsRenderer
 
-class BRERails05(renderer: PartsRenderer<*, *>): ModelRegistry(renderer) {
+class BRERails01Model(renderer: PartsRenderer<*, *>): ModelRegistry(renderer) {
     val pcs = registerParts("Pcs")
+    val ballasts = registerParts(
+        "Ba1", "Ba2", "Ba3", "Ba4","Ba5", "Ba6", "Ba7",
+        "Ba8", "Ba9", "Ba10", "Ba11", "Ba12", "Ba13", "Ba14"
+    )
     val fixtureL = registerParts("FiL")
     val fixtureR = registerParts("FiR")
-    val leftParts = registerParts("RaL", "sideL")
+    val leftParts = registerParts("RaL, sideL")
     val rightParts = registerParts("RaR", "sideR")
-    val start = registerParts("start")
-    val end = registerParts("end")
     val tongFL = registerParts("TLF")
     val tongBL = registerParts("TLB")
-    val tonFR = registerParts("TRF")
+    val tongFR = registerParts("TRF")
     val tongBR = registerParts("TRB")
     val anchorL = registerParts("anchorL")
     val anchorR = registerParts("anchorR")

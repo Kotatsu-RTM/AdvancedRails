@@ -2,7 +2,7 @@ package com.github.kotatsu_rtm.advancedrails.model
 
 import jp.ngt.rtm.render.PartsRenderer
 
-class AR02(renderer: PartsRenderer<*, *>): ModelRegistry(renderer) {
+class AR02Model(renderer: PartsRenderer<*, *>): ModelRegistry(renderer) {
     val base = registerParts("Base")
     val end = registerParts("End")
     val wall = Wall(renderer)
