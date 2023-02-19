@@ -32,9 +32,7 @@ class RoofRenderer: RailPartsRenderer() {
 
         bindTexture(modelObject.textures.first().material.texture)
 
-        for (i in 0..max) {
-            if (i % 5 != 0) return
-
+        for (i in 0..max step 5) {
             val pos = railMap.getRailPos(max, i)
 
             GL11.glPushMatrix()
