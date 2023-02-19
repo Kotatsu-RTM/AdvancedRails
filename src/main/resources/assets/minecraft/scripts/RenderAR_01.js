@@ -1,21 +1,21 @@
-var renderClass = "jp.ngt.rtm.render.RailPartsRenderer";
+// noinspection JSUnresolvedFunction,JSUnresolvedVariable,DuplicatedCode,JSUnusedLocalSymbols,JSCheckFunctionSignatures
+
+const renderClass = "jp.ngt.rtm.render.RailPartsRenderer";
 importPackage(Packages.org.lwjgl.opengl);
 importPackage(Packages.jp.ngt.rtm.render);
 importPackage(Packages.jp.ngt.rtm.rail.util);
 importPackage(Packages.jp.ngt.ngtlib.util);
 importPackage(Packages.jp.ngt.rtm);
-var currentRailIndexField;
+let currentRailIndexField;
 
 function init(par1, par2) {
 }
 
 function renderRailStatic(tileEntity, posX, posY, posZ, par8, pass) {
-  var index = this.getCurrentRailIndex();
-  renderRailStatic2(tileEntity, posX, posY, posZ, index);
+  renderRailStatic2(tileEntity, posX, posY, posZ, this.getCurrentRailIndex());
 }
 
 function renderRailDynamic(tileEntity, posX, posY, posZ, par8, pass) {
-  return;
 }
 
 function shouldRenderObject(tileEntity, objName, len, pos) {
@@ -23,73 +23,61 @@ function shouldRenderObject(tileEntity, objName, len, pos) {
 }
 
 function renderRailStatic2(tileEntity, par2, par4, par6, index) {
-  if (renderer.isSwitchRail(tileEntity)) {
-    return;
-  } else {
-    GL11.glPushMatrix();
+  if (renderer.isSwitchRail(tileEntity)) return;
+  GL11.glPushMatrix();
 
-    var rp = tileEntity.getRailPositions()[0];
-    var x = rp.posX - rp.blockX;
-    var y = rp.posY - rp.blockY;
-    var z = rp.posZ - rp.blockZ;
-    var modelName = this.getBaseRailName(tileEntity);
-    GL11.glTranslatef(par2 + x, par4 + y - 0.0625, par6 + z);
+  const rp = tileEntity.getRailPositions()[0];
+  GL11.glTranslatef(
+      par2 + (rp.posX - rp.blockX),
+      par4 + (rp.posY - rp.blockY) - 0.0625,
+      par6 + (rp.posZ - rp.blockZ)
+  );
 
-    renderer.bindTexture(
-      renderer.getModelObject().textures[0].material.texture
-    );
+  renderer.bindTexture(
+    renderer.getModelObject().textures[0].material.texture
+  );
 
-    var rm2 = tileEntity.getRailMap(null);
-    var railLength = rm2.getLength();
-    var max = Math.floor(railLength * 2);
-    var origPos = rm2.getRailPos(max, 0);
-    var origHeight = rm2.getRailHeight(max, 0);
-    var origCant = rm2.getCant(max, 0);
-    var origCantRad = origCant * (Math.PI / 180);
-    var origCantHeigt = 1.5 * Math.abs(Math.sin(origCantRad));
-    var sLen = railLength / max;
-    var scale = sLen * 2;
+  const rm2 = tileEntity.getRailMap(null);
+  const railLength = rm2.getLength();
+  const max = Math.floor(railLength * 2);
+  const origPos = rm2.getRailPos(max, 0);
+  const origHeight = rm2.getRailHeight(max, 0);
+  const origCant = rm2.getCant(max, 0);
+  const origCantRad = origCant * (Math.PI / 180);
+  const origCantHeight = 1.5 * Math.abs(Math.sin(origCantRad));
 
-    for (var i = 0; i <= max; ++i) {
-      var cant = rm2.getCant(max, i);
-      var cantRad = cant * (Math.PI / 180);
-      var cantHeigt = 1.5 * Math.abs(Math.sin(cantRad));
+  for (let i = 0; i <= max; ++i) {
+    const cant = rm2.getCant(max, i);
+    const cantRad = cant * (Math.PI / 180);
+    const cantHeight = 1.5 * Math.abs(Math.sin(cantRad));
 
-      var p1 = rm2.getRailPos(max, i);
-      var y0 =
-        rm2.getRailHeight(max, i) - origHeight + origCantHeigt - cantHeigt;
+    const p1 = rm2.getRailPos(max, i);
 
-      var x0 = p1[1] - origPos[1];
-      var z0 = p1[0] - origPos[0];
-      var roll = rm2.getCant(max, i);
-      var yaw = rm2.getRailRotation(max, i);
-      var pitch = rm2.getRailPitch(max, i) * -1;
-      var yawRad = yaw * (Math.PI / 180);
-      var yawSin = Math.sin(yawRad);
-      var yawCos = Math.cos(yawRad);
-
-      var brightness = renderer.getBrightness(
+    const brightness = renderer.getBrightness(
         renderer.getWorld(tileEntity),
         p1[1],
         renderer.getY(tileEntity),
         p1[0]
-      );
-      renderer.setBrightness(brightness);
-      GL11.glPushMatrix();
-      GL11.glTranslatef(x0, y0, z0);
-      GL11.glRotatef(yaw, 0.0, 1.0, 0.0);
-      GL11.glRotatef(pitch, 1.0, 0.0, 0.0);
-      if (this.isRightRail(tileEntity, index)) {
-        GL11.glRotatef(180, 0.0, 1.0, 0.0);
-      }
-      if (index != 0) {
-        GL11.glTranslatef(2.0, 1.0, 0.0);
-      }
-      pf_01.render(renderer);
-      GL11.glPopMatrix();
+    );
+    renderer.setBrightness(brightness);
+    GL11.glPushMatrix();
+    GL11.glTranslatef(
+        p1[1] - origPos[1],
+        rm2.getRailHeight(max, i) - origHeight + origCantHeight - cantHeight,
+        p1[0] - origPos[0]
+    );
+    GL11.glRotatef(rm2.getRailRotation(max, i), 0.0, 1.0, 0.0);
+    GL11.glRotatef(rm2.getRailPitch(max, i) * -1, 1.0, 0.0, 0.0);
+    if (this.isRightRail(tileEntity, index)) {
+      GL11.glRotatef(180, 0.0, 1.0, 0.0);
     }
+    if (index !== 0) {
+      GL11.glTranslatef(2.0, 1.0, 0.0);
+    }
+    pf_01.render(renderer);
     GL11.glPopMatrix();
   }
+  GL11.glPopMatrix();
 }
 
 function isLegacy() {
@@ -110,8 +98,7 @@ function isRightRail(tileEntity, index) {
   if (index === 0) {
     return this.getBaseRailName(tileEntity).contains("PF_R");
   } else {
-    var subRail = tileEntity.subRails.get(index - 1);
-    return this.getRailName(subRail).contains("PF_R");
+    return this.getRailName(tileEntity.subRails.get(index - 1)).contains("PF_R");
   }
 }
 
