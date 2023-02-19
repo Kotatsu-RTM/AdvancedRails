@@ -14,7 +14,14 @@ class OERRenderer: RailPartsRenderer() {
         renderStaticParts(tileEntity, x, y, z)
     }
 
-    override fun renderRailDynamic(tileEntity: TileEntityLargeRailCore, x: Double, y: Double, z: Double, par8: Float) {
+    override fun renderRailDynamic(
+        tileEntity: TileEntityLargeRailCore,
+        x: Double,
+        y: Double,
+        z: Double,
+        tickProgression: Float
+    ) {
+        //Do nothing
     }
 
     override fun shouldRenderObject(
