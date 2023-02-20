@@ -34,11 +34,10 @@ object RendererRouter {
     }
 
     private inline fun <reified T: PartsRenderer<*, *>> replaceRenderer(modelObject: ModelObject, newRenderer: T) {
-        if (modelObject.renderer !is T)
-            modelObject::class.java
-                .getDeclaredField("renderer")
-                .apply { isAccessible = true }
-                .set(modelObject, newRenderer)
+        modelObject::class.java
+            .getDeclaredField("renderer")
+            .apply { isAccessible = true }
+            .set(modelObject, newRenderer)
     }
 
     private fun <T> deepCopy(clazz: Class<*>, instance: Any, newInstance: T): T {
