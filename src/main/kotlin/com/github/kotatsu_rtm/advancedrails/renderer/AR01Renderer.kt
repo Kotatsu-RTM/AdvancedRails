@@ -25,6 +25,8 @@ class AR01Renderer: RailPartsRenderer() {
         val originPos = railMap.getRailPos(max, 0)
         val originCantHeight = 1.5F * MathHelper.abs(MathHelper.sin(railMap.getRailRoll(max, 0).toRadians()))
 
+        bindTexture(modelObject.textures.first().material.texture)
+
         GL11.glPushMatrix()
         GL11.glTranslatef(
             (x + (position.posX - position.blockX)).toFloat(),
