@@ -133,7 +133,7 @@ class BRERailsRenderer: RailPartsRenderer() {
             (z + position.posZ - position.blockZ).toFloat()
         )
 
-        for (i in 0 until max) {
+        for (i in 0..max) {
             val pos = railMap.getRailPos(max, i)
 
             setBrightness(getBrightness(tileEntity.world, pos[1].toInt(), tileEntity.y, pos[0].toInt()))
