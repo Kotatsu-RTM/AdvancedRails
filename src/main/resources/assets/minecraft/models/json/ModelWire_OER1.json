@@ -3,7 +3,7 @@
   "model": {
     "modelFile": "BeamOER2.mqo",
     "textures": [["default", "textures/rail/PO.png", ""]],
-    "rendererPath": "scripts/Wire51/renderWire.js"
+    "rendererPath": "scripts/Wire51/renderBeam1.js"
   },
   "buttonTexture": "textures/rail/button_OER_B2.png",
   "deflectionCoefficient": 0.0,
