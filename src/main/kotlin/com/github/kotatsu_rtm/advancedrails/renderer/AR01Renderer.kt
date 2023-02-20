@@ -36,14 +36,15 @@ class AR01Renderer: RailPartsRenderer() {
 
         for (i in 0..max) {
             val pos = railMap.getRailPos(max, i)
+            val cantHeight = 1.5F * MathHelper.abs(MathHelper.sin(railMap.getRailRoll(max, i).toRadians()))
 
             setBrightness(getBrightness(tileEntity.world, pos[1].toInt(), tileEntity.y, pos[0].toInt()))
 
             GL11.glPushMatrix()
             GL11.glTranslatef(
                 (pos[1] - originPos[1]).toFloat(),
-                railMap.getRailHeight(max, i).toFloat() - railMap.getRailHeight(max, 0).toFloat() + originCantHeight
-                        - 1.5F * MathHelper.abs(MathHelper.sin(railMap.getRailRoll(max, i).toRadians())),
+                railMap.getRailHeight(max, i).toFloat() - railMap.getRailHeight(max, 0).toFloat()
+                        + originCantHeight - cantHeight,
                 (pos[0] - originPos[0]).toFloat()
             )
             GL11.glRotatef(railMap.getRailYaw(max, i), 0.0F, 1.0F, 0.0F)
