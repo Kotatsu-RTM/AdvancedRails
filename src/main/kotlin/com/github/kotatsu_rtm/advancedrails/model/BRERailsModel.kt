@@ -10,7 +10,7 @@ class BRERailsModel(renderer: PartsRenderer<*, *>): ModelRegistry(renderer) {
     )
     val fixtureL = registerParts("FiL")
     val fixtureR = registerParts("FiR")
-    val leftParts = registerParts("RaL, sideL")
+    val leftParts = registerParts("RaL", "sideL")
     val rightParts = registerParts("RaR", "sideR")
     val start = registerParts("start")
     val end = registerParts("end")
