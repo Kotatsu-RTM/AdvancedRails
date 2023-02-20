@@ -11,6 +11,7 @@ import jp.ngt.rtm.rail.util.RailMapSwitch
 import jp.ngt.rtm.rail.util.RailPosition
 import jp.ngt.rtm.render.RailPartsRenderer
 import net.minecraft.util.math.MathHelper
+import org.apache.logging.log4j.LogManager
 import org.lwjgl.opengl.GL11
 import kotlin.math.PI
 import kotlin.math.atan
@@ -167,7 +168,7 @@ class BRERailsRenderer: RailPartsRenderer() {
                 model.grooveR.render(this)
             } else if (originalFile == OriginalScriptFile.BRERAILS04) {
                 val yaw = railMap.getRailYaw(max, i)
-                val yaw2 = if (i == max) yaw else railMap.getRailYaw(max, i + 1) - yaw
+                val yaw2 = (if (i == max) yaw else railMap.getRailYaw(max, i + 1)) - yaw
 
                 if (i % 10 == 1) {
                     if (yaw2 <= -0.005F) {
