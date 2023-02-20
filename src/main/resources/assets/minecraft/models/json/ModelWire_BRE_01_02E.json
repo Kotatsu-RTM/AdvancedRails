@@ -3,7 +3,7 @@
   "model": {
     "modelFile": "BRE_01_02E.mqo",
     "textures": [["default", "textures/rail/BRE_01_04.png", ""]],
-    "rendererPath": "scripts/Renderer.js"
+    "rendererPath": "scripts/Wire51/renderWire.js"
   },
   "buttonTexture": "textures/rail/button_BRE_01_02E.png",
   "deflectionCoefficient": 0.0,
