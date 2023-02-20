@@ -3,7 +3,7 @@
   "model": {
     "modelFile": "ModelRail_OER2.mqo",
     "textures": [["default", "textures/rail/OER.png", ""]],
-    "rendererPath": "scripts/RenderOER.js"
+    "rendererPath": "scripts/Renderer.js"
   },
   "ballastWidth": 7,
   "buttonTexture": "textures/rail/button_OER.png",

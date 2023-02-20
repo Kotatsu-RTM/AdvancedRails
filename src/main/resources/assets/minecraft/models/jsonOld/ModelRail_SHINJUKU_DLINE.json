@@ -3,7 +3,7 @@
   "model": {
     "modelFile": "ModelRail_SHINJUKU_DLINE.mqo",
     "textures": [["default", "textures/rail/SHINJUKU.png", ""]],
-    "rendererPath": "scripts/RenderYANE1.js"
+    "rendererPath": "scripts/Renderer.js"
   },
   "ballastWidth": 7,
   "buttonTexture": "textures/rail/button_SHINJUKU_DLINE.png",

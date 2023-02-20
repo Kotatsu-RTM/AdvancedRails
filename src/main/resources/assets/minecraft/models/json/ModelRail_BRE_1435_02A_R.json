@@ -3,7 +3,7 @@
   "model": {
     "modelFile": "BRE_1435_02A_R.mqo",
     "textures": [["default", "textures/rail/bre_01_06n.png", ""]],
-    "rendererPath": "scripts/RenderBRERails_02.js"
+    "rendererPath": "scripts/Renderer.js"
   },
   "ballastWidth": 3,
   "buttonTexture": "textures/railsButton/button_BRERail_1435_01A_R.png",

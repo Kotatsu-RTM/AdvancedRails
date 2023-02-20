@@ -3,7 +3,7 @@
   "model": {
     "modelFile": "ModelRail_YANE2L_3m.mqo",
     "textures": [["default", "textures/rail/YANE.png", ""]],
-    "rendererPath": "scripts/RenderYANE1.js"
+    "rendererPath": "scripts/Renderer.js"
   },
   "ballastWidth": 3,
   "buttonTexture": "textures/rail/button_YANE1L3m.png",

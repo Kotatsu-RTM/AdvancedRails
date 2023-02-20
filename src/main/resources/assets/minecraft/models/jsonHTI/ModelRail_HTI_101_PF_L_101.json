@@ -3,7 +3,7 @@
   "model": {
     "modelFile": "HTI_PF_101.mqo",
     "textures": [["default", "textures/rail/PF3.png", ""]],
-    "rendererPath": "scripts/RenderAR_01.js"
+    "rendererPath": "scripts/Renderer.js"
   },
   "ballastWidth": 1,
   "buttonTexture": "textures/railsButton/button_HTI_PF_L_101.png",

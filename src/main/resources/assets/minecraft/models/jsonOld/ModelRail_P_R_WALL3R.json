@@ -3,7 +3,7 @@
   "model": {
     "modelFile": "ModelRail_WALL3R.mqo",
     "textures": [["default", "textures/rail/WALLS.png", "AlphaBlend"]],
-    "rendererPath": "scripts/RenderWALL1.js"
+    "rendererPath": "scripts/Renderer.js"
   },
   "ballastWidth": 1,
   "polygonType": 4,

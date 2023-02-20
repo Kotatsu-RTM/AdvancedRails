@@ -3,7 +3,7 @@
   "model": {
     "modelFile": "SimpleK2.mqo",
     "textures": [["default", "textures/rail/WireKER.png", ""]],
-    "rendererPath": "scripts/Wire51/renderWire.js"
+    "rendererPath": "scripts/Renderer.js"
   },
   "buttonTexture": "textures/rail/button_SimpleK2.png",
   "deflectionCoefficient": 0.0,
