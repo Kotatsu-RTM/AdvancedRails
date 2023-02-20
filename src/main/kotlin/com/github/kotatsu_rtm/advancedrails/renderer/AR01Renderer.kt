@@ -23,6 +23,7 @@ class AR01Renderer: RailPartsRenderer() {
         val railMap = tileEntity.getRailMap(null)
         val max = MathHelper.floor(railMap.length * 2)
         val originPos = railMap.getRailPos(max, 0)
+        val originHeight = railMap.getRailHeight(max, 0).toFloat()
         val originCantHeight = 1.5F * MathHelper.abs(MathHelper.sin(railMap.getRailRoll(max, 0).toRadians()))
 
         bindTexture(modelObject.textures.first().material.texture)
@@ -43,8 +44,7 @@ class AR01Renderer: RailPartsRenderer() {
             GL11.glPushMatrix()
             GL11.glTranslatef(
                 (pos[1] - originPos[1]).toFloat(),
-                railMap.getRailHeight(max, i).toFloat() - railMap.getRailHeight(max, 0).toFloat()
-                        + originCantHeight - cantHeight,
+                railMap.getRailHeight(max, i).toFloat() - originHeight + originCantHeight - cantHeight,
                 (pos[0] - originPos[0]).toFloat()
             )
             GL11.glRotatef(railMap.getRailYaw(max, i), 0.0F, 1.0F, 0.0F)

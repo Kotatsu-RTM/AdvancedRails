@@ -22,6 +22,7 @@ class RoofRenderer: RailPartsRenderer() {
         val railMap = tileEntity.getRailMap(null)
         val max = floor(railMap.length * 2.0).toInt()
         val originPos = railMap.getRailPos(max, 0)
+        val originHeight = railMap.getRailHeight(max, 0).toFloat()
 
         GL11.glPushMatrix()
         GL11.glTranslatef(
@@ -38,7 +39,7 @@ class RoofRenderer: RailPartsRenderer() {
             GL11.glPushMatrix()
             GL11.glTranslatef(
                 (pos[1] - originPos[1]).toFloat(),
-                (railMap.getRailHeight(max, i) - railMap.getRailHeight(max, 0)).toFloat(),
+                railMap.getRailHeight(max, i).toFloat() - originHeight,
                 (pos[0] - originPos[0]).toFloat()
             )
             GL11.glRotatef(railMap.getRailYaw(max, i), 0.0F, 1.0F, 0.0F)
