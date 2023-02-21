@@ -6,7 +6,7 @@ made by Hongmen Technology Group
 1. 動作環境
 
 必須
-・RealTrainMod 1.12.2(NGT) or 1.7.10(KaizPatch) 
+・RealTrainMod 1.12.2(NGT)
 ・RTM Wire51 Pack
 
 推奨
@@ -14,8 +14,8 @@ made by Hongmen Technology Group
 
 
 2. 導入
-0, Kozu_RE_XまたはBetter_Rail_Electronicsをmodsファイルから削除（すでに導入されている場合）
-1, Advanced_Rails.zipをmodsフォルダにコピー
+0, Kozu_RE_X・Better_Rail_Electronics・Advanced_Rails.zipをmodsファイルから削除（すでに導入されている場合）
+1, AdvancedRails-*.jarをmodsフォルダにコピー
 2, Minecraftを起動し、各モデルが追加されていることを確認
 
 3、中身

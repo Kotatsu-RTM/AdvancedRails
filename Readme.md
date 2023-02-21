@@ -5,28 +5,23 @@
 
 ---
 
-# Advanced Rails
-[![MCVer](https://img.shields.io/badge/Minecraft-1.7.10-brightgreen)](https://www.minecraft.net/)
-[![ForgeVer](https://img.shields.io/badge/Forge-10.13.4.1614-important)](https://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.7.10.html)
-[![KPVer](https://img.shields.io/badge/KaizPatchX-1.3.0-informational)](https://github.com/Kai-Z-JP/KaizPatchX/releases/tag/v1.3.0)  
+# Advanced Rails 
 [![MCVer](https://img.shields.io/badge/Minecraft-1.12.2-brightgreen)](https://www.minecraft.net/)
-[![ForgeVer](https://img.shields.io/badge/Forge-14.23.5.2855-important)](https://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html)
-[![RTMVer](https://img.shields.io/badge/RealTrainMod-2.4.21--40-informational)](https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/3061973)  
-[![DLCount](https://img.shields.io/github/downloads/Hongmen-Technology-Industries/AdvancedRails/total)](https://github.com/Hongmen-Technology-Industries/AdvancedRails/releases)
-[![DLCount](https://img.shields.io/github/downloads/Hongmen-Technology-Industries/AdvancedRails/latest/total)](https://github.com/Hongmen-Technology-Industries/AdvancedRails/releases/latest)
+[![ForgeVer](https://img.shields.io/badge/Forge-14.23.5.2860-important)](https://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html)
+[![RTMVer](https://img.shields.io/badge/RealTrainMod-2.4.23--42-informational)](https://www.curseforge.com/minecraft/mc-mods/realtrainmod/files/3873403)
 ## 動作環境
 
 必須
-- RealTrainMod 1.12.2([NGT](https://www.curseforge.com/minecraft/mc-mods/realtrainmod)) or 1.7.10([KaizPatchX](https://github.com/Kai-Z-JP/KaizPatchX))
-- RTM Wire51 Pack([Link](https://twitter.com/hi03_s/status/914244174433497088))
+- RealTrainMod 1.12.2([NGT](https://www.curseforge.com/minecraft/mc-mods/realtrainmod))
+- RTM Wire51 Pack([Link](https://www.twitter.com/hi03_s/status/914244174433497088))
 
 推奨
 - RAM 16GB以上
 
 ## 導入
 
-0. `Kozu_RE_X.zip`または`Better_Rail_Electronics.zip`を`mods`フォルダから削除（すでに導入されている場合）
-1. `Advanced_Rails.zip`を`mods`フォルダにコピー
+0. `Kozu_RE_X.zip`・`Better_Rail_Electronics.zip`・`Advanced_Rails.zip`を`mods`フォルダから削除（すでに導入されている場合）
+1. `AdvancedRails-*.jar`を`mods`フォルダにコピー
 2. Minecraftを起動し、各モデルが追加されていることを確認
 
 ## 中身
