@@ -287,8 +287,8 @@ class BRERailsRenderer: RailPartsRenderer() {
         val halfMax = MathHelper.floor((max * 4) / 5.0F)
         val startPos = tileEntity.startPoint
         val revXZ = RailPosition.REVISION[tileEntity.railPositions.first().direction.toInt()]
-        val moveX = -startPos[0] + 0.5F + revXZ[0]
-        val moveZ = -startPos[2] + 0.5F + revXZ[1]
+        val moveX = -startPos[0] - 0.5F - revXZ[0]
+        val moveZ = -startPos[2] - 0.5F - revXZ[1]
         val directionFixture =
             if (isPositive && direction == RailDir.LEFT || !isPositive && direction == RailDir.RIGHT) -1.0F else 1.0F
 
