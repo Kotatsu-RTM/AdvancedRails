@@ -193,7 +193,7 @@ class BRERailsRenderer: RailPartsRenderer() {
         val originHeight = railMap.getRailHeight(1, 0)
         val originCantHeight = 1.5F * MathHelper.abs(MathHelper.sin(railMap.getRailRoll(1, 0).toRadians()))
         val numberOfSegment = MathHelper.ceil(railLength / 10.0F)
-        val numberOfCrosstieInSegment = MathHelper.floor(railLength / numberOfSegment * 2.5F)
+        val numberOfCrosstieInSegment = MathHelper.floor(railLength / numberOfSegment.toFloat() * 2.5F)
         val numberOfCrosstie = numberOfCrosstieInSegment * numberOfSegment
 
         bindTexture(modelObject.textures.first().material.texture)
@@ -220,7 +220,7 @@ class BRERailsRenderer: RailPartsRenderer() {
                 GL11.glTranslatef(
                     (startPos[1].toFloat() + (j / numberOfSegment.toFloat()) * segmentLengthX - originPos[1]).toFloat(),
                     (railMap.getRailHeight(numberOfCrosstie, crosstieOffset + j) - originHeight + originCantHeight).toFloat(),
-                    (startPos[0] + (j / numberOfCrosstieInSegment) * segmentLengthZ - originPos[0]).toFloat()
+                    (startPos[0] + (j / numberOfCrosstieInSegment.toFloat()) * segmentLengthZ - originPos[0]).toFloat()
                 )
                 GL11.glRotatef((atan(segmentLengthX / segmentLengthZ) * 180.0F / PI).toFloat(), 0.0F, 1.0F, 0.0F)
                 GL11.glRotatef(-railMap.getRailPitch(numberOfCrosstie, crosstieOffset + j), 1.0F, 0.0F, 0.0F)
