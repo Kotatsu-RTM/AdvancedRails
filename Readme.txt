@@ -1,28 +1,34 @@
 Advanced Rails
-
 made by Hongmen Technology Group
+fork and edit by KotatsuRTM
+
+※Note※
+本リポジトリはAdvancedRailsのForkであり、描画スクリプトをJVM言語へと書き換える
+プロジェクトの一環として開発されています。
+上流のプロジェクトとの同期が考慮されていないため、問題が発生する場合があります。
 
 
-1. 動作環境
+### 1. 動作環境 ###
 
 必須
-・RealTrainMod 1.12.2(NGT)
+・RealTrainMod 1.12.2
+  https://www.curseforge.com/minecraft/mc-mods/realtrainmod
 ・RTM Wire51 Pack
+  https://www.twitter.com/hi03_s/status/914244174433497088
 
 推奨
 ・RAM 16GB以上
 
 
-2. 導入
-0, Kozu_RE_X・Better_Rail_Electronics・Advanced_Rails.zipをmodsファイルから削除（すでに導入されている場合）
-1, AdvancedRails-*.jarをmodsフォルダにコピー
-2, Minecraftを起動し、各モデルが追加されていることを確認
+### 2. 導入 ###
+1. 既に導入されている場合、Kozu_RE_X・Better_Rail_Electronics・Advanced_Rails.zipをmodsフォルダから削除
+2. AdvancedRails-*.jarをmodsフォルダにコピー
+3. Minecraftを起動し、各モデルが追加されていることを確認
 
-3、中身
+### 3. 中身 ###
+当パックのモデルはタグ "AR" または "BRE" で検索可能です。
 
-タグ"BRE"で検索可能
 レールモデル
-
     PC枕木
         バラスト:有/無/ローハイト
         状態:新/古
@@ -64,7 +70,6 @@ made by Hongmen Technology Group
     複線トンネル（小田急代々木上原～梅が丘スタイル）
 
 ワイヤーモデル
-
     角トラスビーム
     Vトラスビーム
     かご型トラスビーム
@@ -77,7 +82,6 @@ made by Hongmen Technology Group
     直流き電線 40m
 
 碍子モデル
-
     き電線やぐら・碍子
         方角:東/西/南/北
     H鋼ビーム用接続ポイント
@@ -92,7 +96,6 @@ made by Hongmen Technology Group
         オフセット:有/無
 
 照明モデル
-
     ビーム吊下信号機用支柱
     障害物検知装置 標準 10:1ブロックL・R
         方向:正面/10:1ブロックL・R
@@ -110,30 +113,30 @@ made by Hongmen Technology Group
         設置方式:地面設置/壁設置
 
 列車検知器モデル
-
     踏切バックアップ装置(地上子)
 
 ATCモデル
-
     ATACS位置補正地上子
         種類:ロング/ショート
 
 
+### 4. その他 ###
+モデルの追加要望や問題等はお気軽に
+リポジトリのissueやメンバーのDMにどうぞ
+また、ご自身のモデルをこのパックに追加したい場合は
+ホンメンのメンバーでなくてもフォークをしてプルリクエストを
+送信して頂ければ追加いたします。
 
-6. 更新履歴
-・2021/09/17 Version 1.0　　　公開
-・2021/09/18 Version 1.1　　　モデル追加、CC-BY適用
-・2021/09/19 Version 1.1.2　　架線柱に一部差分を追加
-・2021/09/21 Version 1.2　　　モデル追加
-・2021/9/29 Version 1.3      モデル追加 名称変更
-・2021/10/14 Version 1.4      モデル追加 権利を移管
-・2021/10/24 Version 1.5      モデル追加
+### 5. 更新履歴 ###
+・2021/09/17 Version 1.0.0  公開
+・2021/09/18 Version 1.1.0  モデル追加、CC-BY適用
+・2021/09/19 Version 1.1.2  架線柱に一部差分を追加
+・2021/09/21 Version 1.2.0  モデル追加
+・2021/09/29 Version 1.3.0  モデル追加 名称変更
+・2021/10/14 Version 1.4.0  モデル追加 権利を移管
+・2021/10/24 Version 1.5.0  モデル追加
 
 
-
-本作品はCC-BYライセンスの下で提供されます
+### 6. ライセンス ###
+本作品は源流元と同じく、CC-BYライセンスの下で提供されます
 https://creativecommons.org/licenses/by/3.0/deed.ja
-
-
-
-
