@@ -1,7 +1,7 @@
 package com.github.kotatsu_rtm.advancedrails.renderer
 
 import com.github.kotatsu_rtm.advancedrails.Util
-import com.github.kotatsu_rtm.advancedrails.model.*
+import com.github.kotatsu_rtm.advancedrails.model.BRERailsModel
 import com.github.kotatsu_rtm.advancedrails.toRadians
 import jp.ngt.rtm.rail.TileEntityLargeRailCore
 import jp.ngt.rtm.rail.TileEntityLargeRailSwitchCore
@@ -11,7 +11,6 @@ import jp.ngt.rtm.rail.util.RailMapSwitch
 import jp.ngt.rtm.rail.util.RailPosition
 import jp.ngt.rtm.render.RailPartsRenderer
 import net.minecraft.util.math.MathHelper
-import org.apache.logging.log4j.LogManager
 import org.lwjgl.opengl.GL11
 import kotlin.math.PI
 import kotlin.math.atan
