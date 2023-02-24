@@ -1,6 +1,6 @@
+import net.minecraftforge.gradle.userdev.DependencyManagementExtension
 import net.minecraftforge.gradle.userdev.UserDevExtension
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import net.minecraftforge.gradle.userdev.DependencyManagementExtension
 
 plugins {
     kotlin("jvm") version "1.8.10"
